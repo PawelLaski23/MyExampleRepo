@@ -22,10 +22,12 @@ public class CreateAcountPage extends BasePage {
         sendKeys(emailInput, email);
         sendKeys(passwordInput, password);
         sendKeys(confirmPasswordInput, password);
+        logger.info("Register data was filled");
         return this;
     }
     public AccountPage clickCreateAccount(){
         clickToElement(createAccountButton);
+        logger.info("Create Account button was clicked");
         return new AccountPage(driver);
     }
 }

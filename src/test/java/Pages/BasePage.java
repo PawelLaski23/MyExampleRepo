@@ -1,10 +1,13 @@
 package Pages;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 public abstract class BasePage {
     protected WebDriver driver;
+    protected Logger logger = LogManager.getLogger();
 
     public BasePage(WebDriver driver) {
         this.driver = driver;
@@ -17,6 +20,7 @@ public abstract class BasePage {
         return driver.findElement(element).getText();
     }
     protected void sendKeys(By element, String keys) {
+        logger.info("Send " + keys + " to "+ element);
         driver.findElement(element).sendKeys(keys);
     }
 }
