@@ -3,10 +3,10 @@ This is Automation Framework created in Java, Selenium WebDriver and TestNG. The
 www.magento.softwaretestingboard.com
 
 # Prerequisites:
-Java jkd 16
+Java jdk 16\
 Maven 3.8.1
 
-#Execution
-Clone repo
-Open command prompt
+# Execution:
+Clone repo\
+Open command prompt\
 Use command: mvn clean test
