@@ -1,10 +1,10 @@
 package Models;
 
 public class User {
-    int randomNumber = (int)Math.floor(Math.random()*100);
+    private int randomNumber = (int)Math.floor(Math.random()*100);
     private String name = "Pawel";
     private String lastName = "Laski";
-    private String email = "pawellaski" + randomNumber + "@email.pl";
+    private String email = "pawellaski" + randomNumber + "@email2.pl";
     private String password = "Password123!";
 
     public String getName() {

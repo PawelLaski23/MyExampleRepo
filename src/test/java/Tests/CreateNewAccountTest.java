@@ -9,12 +9,12 @@ public class CreateNewAccountTest extends BaseTest {
     public void createAccountTest(){
 
         User user = new User();
-        String sectorTitleText = new HomePage(driver)
+        boolean isMyAccountPagePresent = new HomePage(driver)
                 .goToCreateAccPage()
                 .fillData(user.getName(), user.getLastName(), user.getEmail(), user.getPassword())
                 .clickCreateAccount()
-                .getSectorTitleText();
+                .waitToMyAcountPageLoad();
 
-        Assert.assertEquals(sectorTitleText, "My Account");
+        Assert.assertTrue(isMyAccountPagePresent);
     }
 }
