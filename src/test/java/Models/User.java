@@ -8,4 +8,5 @@ public class User {
     private String lastName = "Laski";
     private String email = "pawellaski" + randomNumber + "@email2.pl";
     private String password = "Password123!";
+    private String confirmPassword = "Password123!";
 }
