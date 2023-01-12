@@ -3,6 +3,7 @@ package models;
 import lombok.Data;
 @Data
 public class User {
+
     private int randomNumber = (int)Math.floor(Math.random()*100);
     private String name;
     private String lastName;
@@ -16,8 +17,5 @@ public class User {
         this.email = randomNumber + email;
         this.password = password;
         this.confirmPassword = confirmPassword;
-    }
-
-    public User() {
     }
 }

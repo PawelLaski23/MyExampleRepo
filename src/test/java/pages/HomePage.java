@@ -5,9 +5,9 @@ import org.openqa.selenium.WebDriver;
 
 public class HomePage extends BasePage {
 
-    private By createAccountLink = By.linkText("Create an Account");
-    private By searchInput = By.id("search");
-    private By searchButton = By.xpath("//button[@type='submit']");
+    private final By createAccountLink = By.linkText("Create an Account");
+    private final By searchInput = By.id("search");
+    private final By searchButton = By.xpath("//button[@type='submit']");
 
     public HomePage(WebDriver driver) {
         super(driver);

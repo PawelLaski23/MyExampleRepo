@@ -5,6 +5,7 @@ import org.testng.annotations.Test;
 import pages.HomePage;
 
 public class ProductsTest extends BaseTest {
+
     @Test
     public void checkProductListSize(){
         String product = "jeans pants";

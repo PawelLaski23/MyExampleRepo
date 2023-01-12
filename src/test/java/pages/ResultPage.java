@@ -5,7 +5,7 @@ import org.openqa.selenium.WebDriver;
 
 public class ResultPage extends BasePage{
 
-    private By products = By.xpath("//div[@data-container='product-grid']");
+    private final By products = By.xpath("//div[@data-container='product-grid']");
 
     public ResultPage(WebDriver driver) {
         super(driver);

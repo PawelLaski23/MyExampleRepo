@@ -5,14 +5,14 @@ import org.openqa.selenium.WebDriver;
 
 public class CreateAcountPage extends BasePage {
 
-    private By firstNameInput = By.id("firstname");
-    private By lastNameInput = By.id("lastname");
-    private By emailInput = By.id("email_address");
-    private By passwordInput = By.id("password");
-    private By confirmPasswordInput = By.id("password-confirmation");
-    private By createAccountButton = By.xpath("//span[text()='Create an Account']");
-    private By confirmPassError = By.id("password-confirmation-error");
-    private By emailError = By.id("email_address-error");
+    private final By firstNameInput = By.id("firstname");
+    private final By lastNameInput = By.id("lastname");
+    private final By emailInput = By.id("email_address");
+    private final By passwordInput = By.id("password");
+    private final By confirmPasswordInput = By.id("password-confirmation");
+    private final By createAccountButton = By.xpath("//span[text()='Create an Account']");
+    private final By confirmPassError = By.id("password-confirmation-error");
+    private final By emailError = By.id("email_address-error");
 
     public CreateAcountPage(WebDriver driver) {
         super(driver);
