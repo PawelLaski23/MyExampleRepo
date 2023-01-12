@@ -8,7 +8,9 @@ import org.testng.annotations.BeforeMethod;
 import java.io.IOException;
 
 public abstract class BaseTest extends BrowserSetter {
+
     protected WebDriver driver;
+
     @BeforeMethod
     public void setUp() throws IOException {
         driver = setBrowser();

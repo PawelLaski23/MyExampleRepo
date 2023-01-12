@@ -27,11 +27,13 @@ public class CreateAcountPage extends BasePage {
         logger.info("Register data was filled");
         return this;
     }
+
     public AccountPage clickCreateAccount(){
         clickToElement(createAccountButton);
         logger.info("Create Account button was clicked");
         return new AccountPage(driver);
     }
+
     public String getConfirmPasswordError(){
         return waitToElementVisible(confirmPassError).getText();
     }

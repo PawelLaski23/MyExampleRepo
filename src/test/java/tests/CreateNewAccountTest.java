@@ -12,7 +12,7 @@ public class CreateNewAccountTest extends BaseTest {
 
         User user = new User("Pawel", "Laski", "pawel@email2.com", "Password123!", "Password123!");
         boolean isMyAccountPagePresent = new HomePage(driver)
-                .goToCreateAccPage()
+                .goToCreateAccountPage()
                 .fillData(user.getName(), user.getLastName(), user.getEmail(), user.getPassword(), user.getConfirmPassword())
                 .clickCreateAccount()
                 .waitToMyAccountPageLoad();
@@ -25,7 +25,7 @@ public class CreateNewAccountTest extends BaseTest {
 
         User user = new User("Pawel", "Laski", "InvalidEmail", "Password123!", "InvalidPassword");
         CreateAcountPage createAccountPage = new HomePage(driver)
-                .goToCreateAccPage()
+                .goToCreateAccountPage()
                 .fillData(user.getName(), user.getLastName(), user.getEmail(), user.getPassword(), user.getConfirmPassword());
         createAccountPage.clickCreateAccount();
 
@@ -37,7 +37,7 @@ public class CreateNewAccountTest extends BaseTest {
 
         User user = new User("Pawel", "Laski", "pawel@email2.com", "Password123!", "InvalidPassword");
         CreateAcountPage createAccountPage = new HomePage(driver)
-                .goToCreateAccPage()
+                .goToCreateAccountPage()
                 .fillData(user.getName(), user.getLastName(), user.getEmail(), user.getPassword(), user.getConfirmPassword());
         createAccountPage.clickCreateAccount();
 
