@@ -1,8 +1,8 @@
-package Tests;
+package tests;
 
-import Models.User;
-import Pages.CreateAcountPage;
-import Pages.HomePage;
+import models.User;
+import pages.CreateAcountPage;
+import pages.HomePage;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
