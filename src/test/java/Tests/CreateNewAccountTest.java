@@ -10,12 +10,12 @@ public class CreateNewAccountTest extends BaseTest {
     @Test
     public void createAccount() {
 
-        User user = new User();
+        User user = new User("Pawel", "Laski", "pawel@email2.com", "Password123!", "Password123!");
         boolean isMyAccountPagePresent = new HomePage(driver)
                 .goToCreateAccPage()
                 .fillData(user.getName(), user.getLastName(), user.getEmail(), user.getPassword(), user.getConfirmPassword())
                 .clickCreateAccount()
-                .waitToMyAcountPageLoad();
+                .waitToMyAccountPageLoad();
 
         Assert.assertTrue(isMyAccountPagePresent, "My account page is not present");
     }
@@ -23,8 +23,7 @@ public class CreateNewAccountTest extends BaseTest {
     @Test
     public void createAccountWithInvalidEmail() {
 
-        User user = new User();
-        user.setEmail("InvalidEmail");
+        User user = new User("Pawel", "Laski", "InvalidEmail", "Password123!", "InvalidPassword");
         CreateAcountPage createAccountPage = new HomePage(driver)
                 .goToCreateAccPage()
                 .fillData(user.getName(), user.getLastName(), user.getEmail(), user.getPassword(), user.getConfirmPassword());
@@ -36,8 +35,7 @@ public class CreateNewAccountTest extends BaseTest {
     @Test
     public void createAccountWithInvalidConfirmPass() {
 
-        User user = new User();
-        user.setConfirmPassword("InvalidPassword");
+        User user = new User("Pawel", "Laski", "pawel@email2.com", "Password123!", "InvalidPassword");
         CreateAcountPage createAccountPage = new HomePage(driver)
                 .goToCreateAccPage()
                 .fillData(user.getName(), user.getLastName(), user.getEmail(), user.getPassword(), user.getConfirmPassword());

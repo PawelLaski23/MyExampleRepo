@@ -7,7 +7,7 @@ public class AccountPage extends BasePage {
         super(driver);
     }
 
-    public boolean waitToMyAcountPageLoad(){
+    public boolean waitToMyAccountPageLoad(){
         return waitToTitleContains("My Account");
     }
 }
