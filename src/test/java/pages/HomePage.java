@@ -20,7 +20,7 @@ public class HomePage extends BasePage {
 
     public ResultPage searchProduct(String product) {
         sendKeys(searchInput, product);
-        clickToElement(searchButton);
+        submitElement(searchButton);
         return new ResultPage(driver);
     }
 }

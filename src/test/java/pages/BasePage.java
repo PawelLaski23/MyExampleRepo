@@ -27,6 +27,10 @@ public abstract class BasePage {
         driver.findElement(element).click();
     }
 
+    protected void submitElement(By element){
+        driver.findElement(element).submit();
+    }
+
     protected void sendKeys(By element, String keys) {
         logger.info("Send " + keys + " to "+ element);
         driver.findElement(element).sendKeys(keys);
@@ -42,5 +46,9 @@ public abstract class BasePage {
 
     protected int getListSize(By elementsList){
         return driver.findElements(elementsList).size();
+    }
+
+    protected String getWebElementText(By element){
+        return driver.findElement(element).getText();
     }
 }
