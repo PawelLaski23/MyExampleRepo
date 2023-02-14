@@ -1,6 +1,6 @@
 # Introduction:
 This is Automation Framework created in Java, Selenium WebDriver and TestNG. The tests were written for a sample application intended for automation:
-www.magento.softwaretestingboard.com
+https://magento.softwaretestingboard.com/
 
 # Prerequisites:
 Java jdk 16\
